@@ -1,0 +1,5 @@
+<div *ngIf="pregunta">
+    <app-pregunta-abierta (uploaded)="siguiente($event)" [pregunta]="pregunta" *ngIf="pregunta.tipo==0"></app-pregunta-abierta>
+    <app-pregunta-multiplerespuesta (uploaded)="siguiente($event)" [pregunta]="pregunta" *ngIf="pregunta.tipo==1"></app-pregunta-multiplerespuesta> 
+    <app-pregunta-unicarespuesta (uploaded)="siguiente($event)" [pregunta]="pregunta" *ngIf="pregunta.tipo==2"></app-pregunta-unicarespuesta>   
+</div>
